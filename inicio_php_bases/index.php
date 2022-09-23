@@ -73,7 +73,112 @@
     // Otra caracteristica es la posibilidad de combinarlos juntos. Combinar dos strings
     $nombrecompleto = $primernombre . $apellido;
     echo $nombrecompleto;
+
+    // Comparaciones
+
+    $a = true;
+    $b = false;
+
+    // Doble igual significa que la compración es igual 
+
+    $one = 1;
+    $two = 2;
+
+    $one == $two; //retorna false
+
+    // La exclamación y el igual significa que el valor no es igual 
+
+    $one != $two; //retorna true
+
+    // También se puede emplear simbolos mayor que y menor que combinados con igual
+
+    $one > $two; // retorna false
+    $one < $two; // retorna true
+
+    // Si se combina mayor que o menor que con un igual verificará si el valor es mayor, menor o igual que otro valor.
+    $one <= $two;
+    $one >= $two;
+
+    // Logica booleana
+    // Usando ampersands dobles se verifica si ambos valores son true, si es así retorna un true, sino, un false
+    $a = true;
+    $b = true;
+    $c = false;
+
+    $a && $b; // retorna true
+    $a && $c; // retorna false
+
+    // Usando doble tubo se comprar si alguno de los dos valores es true, si es así, retorna true
+    // si ambos valores son false, retorna false
+
+    $a = true;
+    $b = false;
+    $c = false;
+    $d = true;
+
+    $a || $b; // retorna true
+    $b || $c; // retorna false
+    $a || $d; // retorna true
+
+    // El uso de un signo de exclamación devuelve el valor opuesto
+    $d = true;
+    echo !$d; // retorna false
+
+    // Condicionales
+    // Condición if
+    $animal = 'vaca';
+
+    if ($animal == 'vaca') {
+        echo "Moooooo.....\n";
+    }
+
+    // Se pueden contener multiples condiciones empleando el if, elseif y else
+    $animal = 'pajaro';
+    if ($animal == 'perro') {
+        echo "Woof! 🐶\n";
+    } elseif ($animal == 'gato') {
+        echo "Meow!? 🐱\n";
+    } elseif ($animal == 'pajaro') {
+        echo "Chirp! 🐦\n";
+    } else {
+        echo "No soy un perro, gato o pajaro\n";
+    }
+
+    // Se tiene la alternativa de emplear el Switch en vez del if
+
+    $comida = 'manzanas';
+    switch ($comida) {
+        case 'manzanas':
+            echo "comiendo manzanas\n";
+            break;
+        case 'naranjas':
+            echo "comiendo naranjas\n";
+            break;
+        case 'duraznos':
+            echo "comiendo duraznos\n";
+            break;
+        default:
+            echo "Estoy hambriento\n";
+    }
+
+    //Condicionales ternarias
+    // La condición va seguida de un signo de interrogación antes del valor que debe devolverse
+    // si la condición es verdadera y luego otros dos puntos y un valor para devolver si la condición es falsa
+    
+    $lenguaje = 'ingles';
+    echo $lenguaje == 'espanol' ? "hola\n" : "hello\n";
+
+    // Existe otra forma de condicional ternario que verifica si un valor esta establecido
+    // sino se encuentra valor (nulo) devuelve la sentencian después de los signos de interrogación
+    echo $NoExisto ?? "Variable no encontrada\n";
+
+    // Se pueden realizar varias verificaciones seguidas
+    $SiExisto = "Variable existente\n";
+    echo $NoExisto ?? $SiExisto ?? "No se establece ninguna variable\n";
+
+
 /*
+
     $saludos = 'Hola Marianita, bien o pa que?';
     $saludo2 = 'Que hay para hacer?';
     
